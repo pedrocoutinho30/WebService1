@@ -11,9 +11,6 @@ class RestaurantsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('restaurant')->insert([
-            'name' => str_random(30),
-            'morada' => str_random(50)
-        ]);
+        factory(App\Restaurant::class, 5000)->create();
     }
 }

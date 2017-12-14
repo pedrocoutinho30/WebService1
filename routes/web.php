@@ -12,5 +12,6 @@
 */
 
 $router->get('/restaurants', 'RestaurantsController@index');
-$router->post('/restaurant', 'RestaurantsController@post');
-$router->put('/restaurant', 'RestaurantsController@put');
+$router->get('/restaurant/{id}', 'RestaurantsController@getDetails');
+//$router->post('/restaurant', 'RestaurantsController@post');
+//$router->put('/restaurant', 'RestaurantsController@put');

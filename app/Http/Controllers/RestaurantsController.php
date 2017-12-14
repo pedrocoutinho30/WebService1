@@ -18,10 +18,15 @@ class RestaurantsController extends Controller
 
     public function index()
     {
-        $restaurants = Restaurant::all();
+        $restaurants = Restaurant::getAllRestaurants();
 
-        foreach ($restaurants as $restaurant) {
-            var_dump($restaurant->name);
-        }
+        return response()->json($restaurants);
+    }
+
+    public function getDetails($id)
+    {
+        $restaurants = Restaurant::getRestaurantDetails($id);
+
+        return response()->json($restaurants);
     }
 }

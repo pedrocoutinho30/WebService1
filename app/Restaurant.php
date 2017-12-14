@@ -33,5 +33,17 @@ class Restaurant extends Model
      * @var array
      */
     protected $hidden = [
+        'created_at',
+        'updated_at'
     ];
+
+    public static function getAllRestaurants ()
+    {
+        return Restaurant::all();
+    }
+
+    public static function getRestaurantDetails ($id)
+    {
+        return Restaurant::find($id);
+    }
 }
