@@ -11,7 +11,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    //return $router->app->version();
-    return "Hello World!!";
-});
+$router->get('/restaurants', 'RestaurantsController@index');
+$router->post('/restaurant', 'RestaurantsController@post');
+$router->put('/restaurant', 'RestaurantsController@put');
