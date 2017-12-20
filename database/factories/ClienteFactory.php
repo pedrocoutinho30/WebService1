@@ -11,13 +11,8 @@
 |
 */
 
-$factory->define(App\Restaurant::class, function (Faker\Generator $faker) {
+$factory->define(App\Cliente::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->company,
-        'localizacao' => "$faker->address, $faker->buildingNumber",
-        'longitude'=> $faker->longitude,
-        'latitude'=> $faker->latitude,
-        'capacidade'=> $faker->randomDigitNotNull,
-        'horario'=> "11:00, 23:00"
+        'nome' => $faker->name('f')
     ];
 });

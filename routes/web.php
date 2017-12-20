@@ -12,6 +12,11 @@
 */
 
 $router->get('/restaurants', 'RestaurantsController@index');
-$router->get('/restaurant/{id}', 'RestaurantsController@getDetails');
+$router->get('/restaurants/{id}', 'RestaurantsController@getDetails');
+$router->get('/clientes', 'ClientesController@index');
+$router->get('/clientes/{id}', 'ClientesController@getDetails');
+$router->get('/ementas', 'EmentasController@index');
+$router->get('/ementas/{id}', 'EmentasController@getDetails');
+
 //$router->post('/restaurant', 'RestaurantsController@post');
 //$router->put('/restaurant', 'RestaurantsController@put');

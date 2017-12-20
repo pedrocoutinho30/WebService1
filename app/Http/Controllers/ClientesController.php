@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Restaurant;
+use App\Cliente;
 
-class RestaurantsController extends Controller
+class ClientesController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -18,11 +18,11 @@ class RestaurantsController extends Controller
 
     public function index()
     {
-        return response()->json(Restaurant::getAllRestaurants());
+        return response()->json(Cliente::getAllClientes());
     }
 
     public function getDetails($id)
     {
-        return response()->json(Restaurant::getRestaurantDetails($id));
+        return response()->json(Cliente::getClienteDetails($id));
     }
 }

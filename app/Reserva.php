@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
-class Restaurant extends Model
+class Reserva extends Model
 {
     /**
      * The table associated with the model.
@@ -16,7 +16,7 @@ class Restaurant extends Model
      * @var string
      */
 
-    protected $table = 'restaurant';
+    protected $table = 'reservas';
 
     /**
      * The attributes that are mass assignable.
@@ -24,12 +24,10 @@ class Restaurant extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
-        'localizacao',
-        'longitude',
-        'latitude',
-        'capacidade',
-        'horario'
+        'cliente_id',
+        'ementa_id',
+        'horaReserva',
+        'numeroClientes'
 
     ];
 
@@ -43,14 +41,9 @@ class Restaurant extends Model
         'updated_at'
     ];
 
-    public static function getAllRestaurants ()
+    public static function getAllReservas ()
     {
-        return Restaurant::all();
-    }
-
-    public static function getRestaurantDetails ($id)
-    {
-        return Restaurant::find($id);
+        return Reserva::all();
     }
 
 }

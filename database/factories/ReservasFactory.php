@@ -11,13 +11,11 @@
 |
 */
 
-$factory->define(App\Restaurant::class, function (Faker\Generator $faker) {
+$factory->define(App\Reserva::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->company,
-        'localizacao' => "$faker->address, $faker->buildingNumber",
-        'longitude'=> $faker->longitude,
-        'latitude'=> $faker->latitude,
-        'capacidade'=> $faker->randomDigitNotNull,
-        'horario'=> "11:00, 23:00"
+        'cliente_id' => App\Cliente::getRandomCliente(),
+        'ementa_id' => App\Ementa::getRandomEmenta(),
+        'horaReserva'=> $faker->time,
+        'numeroClientes'=> $faker->randomDigit
     ];
 });

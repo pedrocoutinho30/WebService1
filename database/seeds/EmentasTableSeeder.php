@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RestaurantsTableSeeder extends Seeder
+class EmentasTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class RestaurantsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Restaurant::class, 1)->create();
+        factory(App\Ementa::class, 10)->create();
     }
 }

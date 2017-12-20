@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Restaurant;
+use App\Ementa;
 
-class RestaurantsController extends Controller
+class EmentasController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -18,11 +18,11 @@ class RestaurantsController extends Controller
 
     public function index()
     {
-        return response()->json(Restaurant::getAllRestaurants());
+        return response()->json(Ementa::getAllEmentas());
     }
 
     public function getDetails($id)
     {
-        return response()->json(Restaurant::getRestaurantDetails($id));
+        return response()->json(Ementa::getEmentasDetails($id));
     }
 }
