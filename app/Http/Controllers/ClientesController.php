@@ -25,4 +25,16 @@ class ClientesController extends Controller
     {
         return response()->json(Cliente::getClienteDetails($id));
     }
+
+    public function delete($id)
+    {
+        Cliente::destroy($id);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $cliente = Cliente::find($id);
+        $cliente->nome = 'Tony';
+        $cliente->save();
+        }
 }

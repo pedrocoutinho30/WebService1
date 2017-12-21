@@ -13,10 +13,17 @@
 
 $router->get('/restaurants', 'RestaurantsController@index');
 $router->get('/restaurants/{id}', 'RestaurantsController@getDetails');
+
 $router->get('/clientes', 'ClientesController@index');
 $router->get('/clientes/{id}', 'ClientesController@getDetails');
+$router->delete('/clientes/{id}', 'ClientesController@delete');
+$router->post('/clientes/{id}', 'ClientesController@update');
+
 $router->get('/ementas', 'EmentasController@index');
 $router->get('/ementas/{id}', 'EmentasController@getDetails');
+$router->delete('/ementas/{id}', 'EmentasController@delete');
+$router->post('/ementas/{id}', 'EmentasController@update');
+
 
 //$router->post('/restaurant', 'RestaurantsController@post');
 //$router->put('/restaurant', 'RestaurantsController@put');

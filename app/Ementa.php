@@ -50,9 +50,16 @@ class Ementa extends Model
         return Ementa::find($id);
     }
 
+    public static function ementaDelete($id)
+    {
+        return Ementa::delete($id);
+    }
+
+
     public static function getRandomEmenta()
     {
         return Ementa::find(rand (1, Ementa::count()))->id;
     }
+
 
 }

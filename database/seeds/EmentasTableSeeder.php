@@ -11,6 +11,6 @@ class EmentasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Ementa::class, 10)->create();
+        factory(App\Ementa::class, 27)->create();
     }
 }

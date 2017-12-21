@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Cliente;
+use App\Reserva;
 use App\Restaurant;
 
 class RestaurantsController extends Controller

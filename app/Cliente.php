@@ -53,4 +53,5 @@ class Cliente extends Model
         return Cliente::find(rand (1, Cliente::count()))->id;
     }
 
+
 }
