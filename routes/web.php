@@ -24,6 +24,11 @@ $router->get('/ementas/{id}', 'EmentasController@getDetails');
 $router->delete('/ementas/{id}', 'EmentasController@delete');
 $router->post('/ementas/{id}', 'EmentasController@update');
 
+$router->get('/reservas', 'ReservasController@index');
+$router->get('/reservas/{id}', 'ReservasController@getDetails');
+$router->delete('/reservas/{id}', 'ReservasController@delete');
+$router->post('/reservas/{id}', 'ReservasController@update');
+
 
 //$router->post('/restaurant', 'RestaurantsController@post');
 //$router->put('/restaurant', 'RestaurantsController@put');

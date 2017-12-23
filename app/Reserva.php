@@ -46,4 +46,9 @@ class Reserva extends Model
         return Reserva::all();
     }
 
+    public static function getReservasDetails ($id)
+    {
+        return Reserva::find($id);
+    }
+
 }
