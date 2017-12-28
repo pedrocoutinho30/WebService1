@@ -42,4 +42,5 @@ class ReservasController extends Controller
         return response()->json(Reserva::getReservasDetails($id));
 
     }
+
 }

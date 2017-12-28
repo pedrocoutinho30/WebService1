@@ -21,10 +21,16 @@ class RestaurantsController extends Controller
     public function index()
     {
         return response()->json(Restaurant::getAllRestaurants());
+
     }
 
     public function getDetails($id)
     {
         return response()->json(Restaurant::getRestaurantDetails($id));
     }
+
+    public function show(){
+        return view('show');
+    }
 }
+

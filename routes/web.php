@@ -11,8 +11,11 @@
 |
 */
 
+
 $router->get('/restaurants', 'RestaurantsController@index');
 $router->get('/restaurants/{id}', 'RestaurantsController@getDetails');
+
+$router->get('show', 'RestaurantController@show');
 
 $router->get('/clientes', 'ClientesController@index');
 $router->get('/clientes/{id}', 'ClientesController@getDetails');

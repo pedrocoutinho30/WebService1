@@ -30,7 +30,6 @@ class Restaurant extends Model
         'latitude',
         'capacidade',
         'horario'
-
     ];
 
     /**
@@ -51,6 +50,9 @@ class Restaurant extends Model
     public static function getRestaurantDetails ($id)
     {
         return Restaurant::find($id);
+    }
+    public static function show(){
+        return view('show');
     }
 
 }
